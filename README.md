@@ -69,14 +69,40 @@ npm start
 5. Access the app
 Open http://localhost:3000 to access the login and signup pages.
 
-API Endpoints
-POST /signup: Registers a new user.
-Body: { username, email, password }
-GET /auth/verify-email/:token: Verifies the email using a JWT token.
-POST /login: Logs in a user.
-Body: { username, password }
-PATCH /reset-password: Resets the password for a user.
-Body: { email, password }
+## API Endpoints
+
+- **POST /signup**: Registers a new user.
+  - **Body**: 
+    ```json
+    {
+      "username": "<username>",
+      "email": "<email>",
+      "password": "<password>"
+    }
+    ```
+
+- **GET /auth/verify-email/:token**: Verifies the email using a JWT token.
+  - **Params**: 
+    - `token`: The JWT token sent in the email for verification.
+
+- **POST /login**: Logs in a user.
+  - **Body**: 
+    ```json
+    {
+      "username": "<username>",
+      "password": "<password>"
+    }
+    ```
+
+- **PATCH /reset-password**: Resets the password for a user.
+  - **Body**: 
+    ```json
+    {
+      "email": "<email>",
+      "password": "<new-password>"
+    }
+    ```
+    
 Project Structure
 ```bash
 .
