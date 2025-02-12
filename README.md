@@ -34,42 +34,38 @@ This project implements a Login and Signup system with email verification using 
 ```bash
 git clone <repository-url>
 cd <project-directory>
+```
 2. Install dependencies
 For Backend:
-bash
-Copy
-Edit
+```bash
 cd backend
 npm install
+```
 For Frontend:
-bash
-Copy
-Edit
+```bash
 cd frontend
 npm install
+```
 3. Set up environment variables
 Create a .env file in the root of your backend directory and add the following:
-
-ini
-Copy
-Edit
+``` bash
 EMAIL_USER=<your-email>
 EMAIL_PASS=<your-email-password>
 JWT_SECRET=<your-secret-key>
 MONGODB_URI=<your-mongodb-uri>
+```
 4. Run the application
 Start the backend:
-bash
-Copy
-Edit
+```bash
 cd backend
 npm start
+```
 Start the frontend:
-bash
-Copy
-Edit
+```bash
+
 cd frontend
 npm start
+```
 5. Access the app
 Open http://localhost:3000 to access the login and signup pages.
 
@@ -82,9 +78,7 @@ Body: { username, password }
 PATCH /reset-password: Resets the password for a user.
 Body: { email, password }
 Project Structure
-bash
-Copy
-Edit
+```bash
 .
 ├── backend
 │   ├── Models
@@ -101,3 +95,4 @@ Edit
 │   │   ├── index.js
 │   │   └── ...
 └── README.md
+```
